@@ -54,3 +54,30 @@ let LineChart = new Chart(content, {
     ],
   },
 });
+
+const barchart = document.getElementById("Bar");
+const Fruits = ["Apple", "Orange", "Grapes", "Mango", "Banana", "Peach"];
+const Price = [22, 23, 28, 32, 37, 48];
+let BarChart = new Chart(barchart, {
+  type: "bar",
+  data: {
+    labels: Fruits,
+    datasets: [
+      {
+        label: "Price Tags",
+        data: Price,
+        fill: false,
+        lineTension: 0.5,
+        backgroundColor: "rgba(255, 159, 67, 1.0)",
+        borderColor: "rgba(10, 189, 227, 1.0)",
+        borderCapStyle: "round",
+        borderJoinStyle: "round",
+        pointBorderColor: "rgba(29, 209, 161, 1.0)",
+        pointBackgroundColor: "rgba(29, 209, 161, 1.0)",
+        pointHoverBorderColor: "rgba(238, 82, 83, 1.0)",
+        pointHoverBackgroundColor: "rgba(0, 210, 211, 1.0)",
+        pointHoverBorderWidth: 4,
+      },
+    ],
+  },
+});
